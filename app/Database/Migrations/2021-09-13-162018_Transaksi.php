@@ -33,6 +33,16 @@ class Transaksi extends Migration
                 'type' => 'INT',
                 'constraint' => 11,
             ],
+            'alamat' => [
+                'type' => 'TEXT',
+            ],
+            'ongkir' => [
+                'type' => 'INT'
+            ],
+            'status' => [
+                'type' => 'INT',
+                'constraint' => 1,
+            ],
             'created_by' => [
                 'type' => 'INT',
                 'constraint' => 11
