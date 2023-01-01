@@ -17,8 +17,8 @@ $password = [
 ];
 
 $submit = [
-    'class' => 'btn btn-success',
-    'value' => 'submit',
+    'class' => 'btn btn-success w-100',
+    'value' => 'Login',
 ];
 
 $session = session();
@@ -39,16 +39,18 @@ $errors = $session->getFlashdata('errors');
     </div>
 <?php endif; ?>
 <?= form_open('Auth/login'); ?>
-<div class="form-group">
-    <?= form_label('Username', 'username'); ?>
-    <?= form_input($username); ?>
-</div>
-<div class="form-group">
-    <?= form_label('Password', 'password'); ?>
-    <?= form_password($password); ?>
-</div>
-<div class="text-right">
-    <?= form_submit($submit); ?>
+<div class="col-md-5 ">
+    <div class="form-group">
+        <?= form_label('Username', 'username'); ?>
+        <?= form_input($username); ?>
+    </div>
+    <div class="form-group">
+        <?= form_label('Password', 'password'); ?>
+        <?= form_password($password); ?>
+    </div>
+    <div class="text-right">
+        <?= form_submit($submit); ?>
+    </div>
 </div>
 <?= form_close(); ?>
 
